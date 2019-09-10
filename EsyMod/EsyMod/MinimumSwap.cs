@@ -22,9 +22,25 @@ class Solution
         int[] result = new int[arr.Length];
         for (int i = 0; i < arr.Length; i++)
         {
+            if (arr[i] == i + 1)
+            {
+                continue;
+            }
+            
+            for(int k = i + 1; k < arr.Length; k++)
+            {
+                if (arr[k] == i+1)
+                {
+                    int temp = arr[k];
+                    arr[k] = arr[i];
+                    arr[i] = temp;
+                    minSwap++;
+                    break;
+                }
+            }
 
         }
-
+        return minSwap;
     }
 
     static void Main(string[] args)
