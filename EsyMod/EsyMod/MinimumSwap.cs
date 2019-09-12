@@ -22,6 +22,7 @@ class Solution
         int[] result = new int[arr.Length];
         for (int i = 0; i < arr.Length; i++)
         {
+            
             if (arr[i] == i + 1)
             {
                 continue;
